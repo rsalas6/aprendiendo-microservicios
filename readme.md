@@ -5,7 +5,7 @@ Este curso intensivo de seis semanas está diseñado para estudiantes de nivel i
 
 ## **Semana 1: Introducción a Microservicios y Docker**
 
-### **[Día 1: Microservicio con Python y Flask](/semana-1/dia-1/readme.md) - Completado**
+### **[Día 1: Microservicio con Python y Flask](/semana-1/dia-1/readme.md) - ✅ Completado**
 - **[Teoría](/semana-1/dia-1/teoria.md)**: Introducción a microservicios y Flask.
 - **[Práctica](/semana-1/dia-1/practica/)**: Crear un microservicio sencillo con Python y Flask y dockerizarlo.
   - Crear una aplicación básica con Flask.
