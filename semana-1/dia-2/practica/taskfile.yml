@@ -1,0 +1,35 @@
+version: '3'
+
+# Definición de las variables
+vars:
+  app_name: my_fastapi_microservice
+  app_source: .
+  container_workdir: /app
+
+# Definición de las tareas
+tasks:
+  dev:build:
+    desc: Construir la imagen de Docker para desarrollo
+    cmds:
+      - docker build -f Dockerfile.dev -t {{.app_name}}-dev .
+
+  dev:run:
+    desc: Ejecutar el contenedor de Docker en modo desarrollo con recarga automática
+    cmds:
+      - docker run --rm -p 5000:5000 -v {{.app_source}}:{{.container_workdir}} {{.app_name}}-dev
+
+  prod:build:
+    desc: Construir la imagen de Docker para producción
+    cmds:
+      - docker build -f Dockerfile.prod -t {{.app_name}}-prod .
+
+  prod:run:
+    desc: Ejecutar el contenedor de Docker en modo producción
+    cmds:
+      - docker run --rm -p 5000:5000 {{.app_name}}-prod
+
+  clean:
+    desc: Eliminar las imágenes de Docker
+    cmds:
+      - docker rmi {{.app_name}}-dev || true
+      - docker rmi {{.app_name}}-prod || true
