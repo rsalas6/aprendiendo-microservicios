@@ -16,7 +16,7 @@ tasks:
   dev:run:
     desc: Ejecutar el contenedor de Docker en modo desarrollo con recarga automática
     cmds:
-      - docker run --rm -p 5000:5000 -v {{.app_source}}:{{.container_workdir}} {{.app_name}}-dev
+      - docker run --rm -p 5001:5001 -v {{.app_source}}:{{.container_workdir}} {{.app_name}}-dev
 
   prod:build:
     desc: Construir la imagen de Docker para producción
@@ -26,7 +26,7 @@ tasks:
   prod:run:
     desc: Ejecutar el contenedor de Docker en modo producción
     cmds:
-      - docker run --rm -p 5000:5000 {{.app_name}}-prod
+      - docker run --rm -p 5001:5001 {{.app_name}}-prod
 
   clean:
     desc: Eliminar las imágenes de Docker
