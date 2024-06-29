@@ -9,22 +9,22 @@ vars:
 
 # Definición de las tareas
 tasks:
-  build-dev:
+  dev:build:
     desc: Construir la imagen de Docker para desarrollo
     cmds:
       - docker build -f Dockerfile.dev -t {{.app_name}}-dev .
 
-  build-prod:
-    desc: Construir la imagen de Docker para producción
-    cmds:
-      - docker build -f Dockerfile.prod -t {{.app_name}}-prod .
-
-  run-dev:
+  dev:run:
     desc: Ejecutar el contenedor de Docker en modo desarrollo
     cmds:
       - docker run --rm -p 5000:5000 -v {{.app_source}}:{{.container_workdir}} -e FLASK_DEBUG={{.flask_debug}} {{.app_name}}-dev
 
-  run-prod:
+  prod:build:
+    desc: Construir la imagen de Docker para producción
+    cmds:
+      - docker build -f Dockerfile.prod -t {{.app_name}}-prod .
+
+  prod:run:
     desc: Ejecutar el contenedor de Docker en modo producción
     cmds:
       - docker run --rm -p 5000:5000 -e FLASK_DEBUG={{.flask_debug}} {{.app_name}}-prod
@@ -34,18 +34,3 @@ tasks:
     cmds:
       - docker rmi {{.app_name}}-dev || true
       - docker rmi {{.app_name}}-prod || true
-
-  push:
-    desc: Push de las imágenes al registry de Docker
-    cmds:
-      - docker tag {{.app_name}}-prod myregistry.com/{{.app_name}}-prod
-      - docker push myregistry.com/{{.app_name}}-prod
-
-  # Tarea para setear una variable en runtime si es necesario
-  set-app-name:
-    desc: Establecer el nombre de la aplicación
-    vars:
-      app_name: '{{default "my_flask_microservice" .APP_NAME}}'
-
-# Si se necesita cambiar el nombre de la aplicación en runtime se puede correr:
-# task set-app-name -- APP_NAME=nuevo_nombre && task build

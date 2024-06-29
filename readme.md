@@ -5,7 +5,7 @@ Este curso intensivo de 6 semanas está diseñado para estudiantes de nivel inte
 
 ## **Semana 1: Introducción a los Microservicios y Docker**
 
-### **[Día 1: Creación de un Microservicio con Flask](/semana-1/dia-1/readme.md)**
+### **[✅ Día 1: Creación de un Microservicio con Flask](/semana-1/dia-1/readme.md)**
 - **[Teoría](/semana-1/dia-1/teoria.md)**: Introducción a los microservicios y Flask.
 - **[Práctica](/semana-1/dia-1/practica/)**: Crear un microservicio sencillo con Python y Flask y dockerizarlo.
   - Configurar el entorno de desarrollo.
@@ -13,9 +13,9 @@ Este curso intensivo de 6 semanas está diseñado para estudiantes de nivel inte
   - Escribir un Dockerfile para la aplicación.
   - Construir y ejecutar el contenedor Docker.
 
-### **[Día 2: Creación de un Microservicio con FastAPI](#)**
-- **[Teoría](#)**: Introducción a FastAPI y sus ventajas.
-- **[Práctica](#)**: Crear un microservicio sencillo con Python y FastAPI y dockerizarlo.
+### **[✅ Día 2: Creación de un Microservicio con FastAPI](/semana-1/dia-2/readme.md)**
+- **[Teoría](/semana-1/dia-2/teoria.md)**: Introducción a FastAPI y sus ventajas.
+- **[Práctica](/semana-1/dia-2/practica/)**: Crear un microservicio sencillo con Python y FastAPI y dockerizarlo.
   - Configurar el entorno de desarrollo.
   - Crear una aplicación básica con FastAPI.
   - Escribir un Dockerfile para la aplicación.
