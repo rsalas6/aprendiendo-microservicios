@@ -9,7 +9,7 @@ app.config['DEBUG'] = os.getenv('FLASK_DEBUG', 'false').lower() in ['true', '1']
 def generar_hash():
     data = request.json
     cadena = data.get('cadena')
-    tipo_hash = data.get('type', 'md5')
+    tipo_hash = data.get('tipo_hash', 'md5')
 
     if not cadena:
         return jsonify({"error": "No se proporcionó ninguna cadena"}), 400

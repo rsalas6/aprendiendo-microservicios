@@ -21,9 +21,9 @@ Este curso intensivo de 6 semanas está diseñado para estudiantes de nivel inte
   - Escribir un Dockerfile para la aplicación.
   - Construir y ejecutar el contenedor Docker.
 
-### **[Día 3: Docker Compose](#)**
-- **[Teoría](#)**: Introducción a Docker Compose y su uso en aplicaciones multicontenedor.
-- **[Práctica](#)**: Conectar los microservicios con Docker Compose.
+### **[✅ Día 3: Docker Compose](/semana-1/dia-3/readme.md)**
+- **[Teoría](/semana-1/dia-3/teoria.md)**: Introducción a Docker Compose y su uso en aplicaciones multicontenedor.
+- **[Práctica](/semana-1/dia-3/practica/)**: Conectar los microservicios con Docker Compose.
   - Crear un archivo docker-compose.yml.
   - Definir los servicios para Flask y FastAPI.
   - Ejecutar y probar la comunicación entre microservicios.
