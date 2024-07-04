@@ -1,5 +1,4 @@
-﻿```markdown
-# **Curso: microservicios con AWS, Docker y Python**
+﻿# **Curso: microservicios con AWS, Docker y Python**
 
 ## **Descripción del Curso**
 Este curso intensivo de seis semanas está diseñado para estudiantes de nivel intermedio que desean aprender a desarrollar y gestionar microservicios utilizando Python, Docker y AWS. El curso combina teoría y práctica diaria, con proyectos semanales y un proyecto final para aplicar todos los conocimientos adquiridos.
